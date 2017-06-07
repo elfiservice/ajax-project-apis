@@ -12,8 +12,15 @@ function loadData() {
     $nytElem.text("");
 
     // load streetview
+    var streetInput = encodeURI($("input#street").val());
+    var cityInput = encodeURI($("input#city").val());
+    var linkGoogleMaps = "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + streetInput + "%20" +cityInput;
 
-    // YOUR CODE GOES HERE!
+    if ($(".bgimg").length) {
+        $(".bgimg").remove();
+    }
+
+    $body.append("<img class='bgimg' src=" + linkGoogleMaps + ">");
 
     return false;
 };
