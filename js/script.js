@@ -12,14 +12,16 @@ function loadData() {
     $nytElem.text("");
 
     // load streetview
-    var streetInput = encodeURI($("input#street").val());
-    var cityInput = encodeURI($("input#city").val());
-    var linkGoogleMaps = "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + streetInput + "%20" +cityInput;
+    var streetInput = $("input#street").val();
+    var cityInput = $("input#city").val();
+    var fullAdressLink = encodeURI(streetInput + " " + cityInput);
+    var linkGoogleMaps = "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + fullAdressLink;
 
     if ($(".bgimg").length) {
         $(".bgimg").remove();
     }
 
+    $greeting.text('So, you want to live at ' + streetInput + ", " + cityInput );
     $body.append("<img class='bgimg' src=" + linkGoogleMaps + ">");
 
     return false;
