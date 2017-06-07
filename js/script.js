@@ -27,7 +27,7 @@ function loadData() {
 
     //Ajax request The New York Times articls
     var apiKeyNYT = "5ed067b15e7c4deeb029547379606584";
-    var requestLinkNYT = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + fullAdressLink + "&page=1&sort=newest&api-key=" + apiKeyNYT;
+    var requestLinkNYT = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + fullAdressLink + "&page=1&sort=newest&api-key=" + apiKeyNYT;
     $.getJSON( requestLinkNYT, function( data ) {
 
         $nytHeaderElem.text("NYT Articles About " + cityInput);
@@ -47,7 +47,7 @@ function loadData() {
         });
 
       //Ajax Request wikipedia
-      var requestLinkWiki = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + cityInput + "&callback=wikiCallback";
+      var requestLinkWiki = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + cityInput + "&callback=wikiCallback";
 
       //Set a time cause the request Failed
       var wikiRequestTimeOut = setTimeout(function(){
