@@ -5,24 +5,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Companion of Moving</title>
+    <title>AJ Companion of Moving</title>
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Titillium+Web:100,300,600" rel="stylesheet">
     <link rel="stylesheet" href="css/libs/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <style>
+body { padding-top: 70px; }
+    </style>
 </head>
 <body>
 
-    <form id="form-container" class="form-container">
-        <label for="street">Street: </label><input type="text" id="street" value="">
-        <label for="city">City: </label><input type="text" id="city" value="">
-        <button id="submit-btn">Submit</button>
-    </form>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">AJ Companion of Moving</a>
+        </div>
 
-    <hr>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form-container" class="navbar-form navbar-left form-container">
+            <div class="form-group">
+                <label for="street">Street: </label><input type="text" id="street" value="" class="form-control" placeholder="Street">
+                <label for="city">City: </label><input type="text" id="city" value="" class="form-control" placeholder="City">
+            </div>
+            <button type="submit" id="submit-btn" class="btn btn-default">Go</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Me</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Me on the Search</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
     <h2 id="greeting" class="greeting">Where do you want to live?</h2>
-
 
     <div class="wikipedia-container">
         <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
@@ -35,7 +67,7 @@
         <ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
     </div>
 
-    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
