@@ -14,7 +14,6 @@ body { padding-top: 70px; }
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,8 +31,8 @@ body { padding-top: 70px; }
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <form id="form-container" class="navbar-form navbar-left form-container">
             <div class="form-group">
-                <label for="street">Street: </label><input type="text" id="street" value="" class="form-control" placeholder="Street">
-                <label for="city">City: </label><input type="text" id="city" value="" class="form-control" placeholder="City">
+                <label for="street"></label><input type="text" id="street" value="" class="form-control" placeholder="Street">
+                <label for="city"> </label><input type="text" id="city" value="" class="form-control" placeholder="City">
             </div>
             <button type="submit" id="submit-btn" class="btn btn-default">Go</button>
           </form>
@@ -54,28 +53,20 @@ body { padding-top: 70px; }
       </div><!-- /.container-fluid -->
     </nav>
 
-    <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+    <section class="container">
+        <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+        <div class="row">
+            <section class="nytimes-container col-md-8">
+                    <h3 id="nytimes-header">The New York Times Articles</h3>
+                    <div id="nytimes-articles" class="article-list color-muted"><i>Enter an address and hit submit and the NY Times will tell you here!</i></div>
+            </section>
 
-<section class="container">
-    <div class="row">
-
-
-
-        <section class="nytimes-container col-md-8">
-
-                <h3 id="nytimes-header">The New York Times Articles</h3>
-                <ul id="nytimes-articles" class="article-list color-muted"><i>Enter an address and hit submit and the NY Times will tell you here!</i></ul>
-
-
-        </section>
-
-        <aside class="wikipedia-container col-md-4">
-            <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-            <ul id="wikipedia-links" class="color-muted"><i>Type in an address above and find relevant Wikipedia articles here!</i></ul>
-        </aside>
-    </div>
-</section>
-
+            <aside class="wikipedia-container col-md-3 col-md-offset-1">
+                <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+                <ul id="wikipedia-links" class="color-muted"><i>Type in an address above and find relevant Wikipedia articles here!</i></ul>
+            </aside>
+        </div>
+    </section>
 
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>

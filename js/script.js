@@ -31,13 +31,15 @@ function loadData() {
     $.getJSON( requestLinkNYT, function( data ) {
 
         $nytHeaderElem.html("NYT Articles About <i>" + cityInput + "</i> city");
-
+        $nytElem.removeClass("color-muted");
         articles = data.response.docs;
         articles.forEach(function(article){
-            $nytElem.append('<li class="article">' +
-            '<a href="' + article.web_url + '" target="_blank">' + article.headline.main + '</a>' +
+            $nytElem.append('' +
+            '<article class="article col-md-4">' +
+            '<h4><a href="' + article.web_url + '" target="_blank">' + article.headline.main + '</a></h4>' +
             '<p>' + article.snippet + '</p>' +
-            '</li>');
+            '</article>' +
+            '');
         });
 
     }).fail(function(e) {
