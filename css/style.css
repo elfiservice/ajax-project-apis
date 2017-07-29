@@ -1,6 +1,10 @@
 * {box-sizing:border-box;}
 body {background-color: #CCC;}
 
+.color-muted {
+    color: #a9a9a9;
+}
+
 .bgimg {
     position:fixed;
     top: 0;
@@ -17,16 +21,18 @@ body {background-color: #CCC;}
 }
 
 .wikipedia-container {
-    float:right;
+    /*float:right;
     width:290px;
-    padding:10px;
-    margin-right: 10px;
+
+    margin-right: 10px;*/
     background-color: rgba(255,255,255,0.7);
+    padding:10px;
 }
 
 .nytimes-container {
     padding: 10px;
-    margin-right:300px;
+
+    /*margin-right:300px;*/
     background-color: rgba(255,255,255,0.7);
 }
 

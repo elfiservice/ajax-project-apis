@@ -21,7 +21,7 @@ function loadData() {
         $(".bgimg").remove();
     }
 
-    $greeting.text('So, you want to live at ' + streetInput + ", " + cityInput );
+    $greeting.text('So, you would like to live at ' + streetInput + " in " + cityInput + " city." );
     $body.append("<img class='bgimg' src=" + linkGoogleMaps + ">");
 
 
@@ -30,7 +30,7 @@ function loadData() {
     var requestLinkNYT = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + fullAdressLink + "&page=1&sort=newest&api-key=" + apiKeyNYT;
     $.getJSON( requestLinkNYT, function( data ) {
 
-        $nytHeaderElem.text("NYT Articles About " + cityInput);
+        $nytHeaderElem.html("NYT Articles About <i>" + cityInput + "</i> city");
 
         articles = data.response.docs;
         articles.forEach(function(article){

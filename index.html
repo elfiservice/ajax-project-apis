@@ -56,16 +56,26 @@ body { padding-top: 70px; }
 
     <h2 id="greeting" class="greeting">Where do you want to live?</h2>
 
-    <div class="wikipedia-container">
-        <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-        <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
-    </div>
+<section class="container">
+    <div class="row">
 
 
-    <div class="nytimes-container">
-        <h3 id="nytimes-header">New York Times Articles</h3>
-        <ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+
+        <section class="nytimes-container col-md-8">
+
+                <h3 id="nytimes-header">The New York Times Articles</h3>
+                <ul id="nytimes-articles" class="article-list color-muted"><i>Enter an address and hit submit and the NY Times will tell you here!</i></ul>
+
+
+        </section>
+
+        <aside class="wikipedia-container col-md-4">
+            <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+            <ul id="wikipedia-links" class="color-muted"><i>Type in an address above and find relevant Wikipedia articles here!</i></ul>
+        </aside>
     </div>
+</section>
+
 
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
